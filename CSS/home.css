@@ -1,4 +1,103 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+}
+
+header.header{
+    margin: 5px 5px 0px 80px;
+    padding-bottom: 20%;
+}
+.circle{
+    background-color: #ff473649;
+    border-radius: 50%;
+}
+.big{
+    position: absolute;
+    width: 1080px;
+    height: 1080px;
+    top: -65%;
+    right: -22%;
+    z-index: 0;
+}
+svg#back{
+    position: absolute;
+    width: 40%;
+    height: auto;
+    background-color: transparent;
+    top: 11%;
+    right: 100px;
+}
+
+.logo{
+    margin: 18px 0 0 0;
+    font-size: 18px;
+    float: left;
+}
+.logo::before{
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    padding: 0 2px;
+    background: center / contain no-repeat url('/img/logo.svg');
+}
+
+
+nav {
+    float: right;
+    margin: 20px 5px;
+}
+nav ul li{
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;   
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 35px; 
+    margin: 0 16px;
+    color: #000000;
+}
+
+nav ul li a.active{
+    background-color: #FF1400;
+    color: #ffffff;
+}
+
+.content{
+    clear: both;
+    display: flow-root;
+}
+
+.big-title{
+    font-size: 7rem;
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.green{
+    color: #24D50D;
+}
+
+.head-body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 50%;
+    margin: 20px 0;
+}
+
+.startbtn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FF1400;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 20px 20px 20px 20px;
 }
