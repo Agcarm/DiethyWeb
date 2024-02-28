@@ -1,26 +1,38 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F5F5F5;
 }
 
 header.header{
-    margin: 5px 5px 0px 80px;
+    margin: 5px 0px 0px 140px;
     padding-bottom: 20%;
 }
 .circle{
     background-color: #ff473649;
     border-radius: 50%;
+    position: absolute;
+    z-index: 0;
 }
 .big{
-    position: absolute;
     width: 1080px;
     height: 1080px;
     top: -65%;
     right: -22%;
-    z-index: 0;
+}
+.medium{
+    width: 150px;
+    height: 150px;
+    left: -50px;
+    bottom: -75px;
+}
+.small{
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 150px;
 }
 svg#back{
     position: absolute;
@@ -28,7 +40,7 @@ svg#back{
     height: auto;
     background-color: transparent;
     top: 11%;
-    right: 100px;
+    right: 134px;
 }
 
 .logo{
@@ -74,8 +86,8 @@ nav ul li a.active{
 }
 
 .big-title{
-    font-size: 7rem;
-    width: 60%;
+    font-size: 5.2rem;
+    width: 56%;
     margin-top: 100px;
     margin-bottom: 20px;
 }
@@ -86,9 +98,10 @@ nav ul li a.active{
 
 .head-body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    width: 50%;
-    margin: 20px 0;
+    font-size: 18px;
+    width: 43%;
+    margin: 50px 0;
+    word-spacing: 2px;
 }
 
 .startbtn{
@@ -100,4 +113,68 @@ nav ul li a.active{
     padding: 10px 20px;
     margin: 5px 0;
     border-radius: 20px 20px 20px 20px;
+}
+
+main{
+    display: grid;
+    row-gap: 100px;
+}
+
+section.fruit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .fruitdesc{
+        width: 28%;
+        margin-right: 150px;
+    }
+    .title-2{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .fruitdesc h2::before{
+        display: inline-block;
+        position: relative;
+        content: '';
+        height: 70px;
+        width: 8px;
+        background-color: #FF1400;
+        top: 15px;
+        margin: 0 10px 0 0;
+    }
+    div.fruitimg{
+        display: inline;
+        height: 600px;
+        width: 600px;
+        border-radius: 50%;
+        box-shadow: 30px 15px 60px #0000002b ;
+        background: center / cover no-repeat url('../img/home/50861.jpg');
+    }
+    .sec-p{
+        margin: 50px 0;
+        text-align: justify;
+    }
+    a.fruitbtn{
+        text-decoration: none;
+        background-color: transparent;
+        border: solid #24D50D 2px;
+        border-radius: 70px;
+        color: #24D50D;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    .vegdesc{
+        width: 29%;
+        margin-left: 150px;
+    }
+    div.vegimg{
+        display: inline;
+        height: 600px;
+        width: 600px;
+        border-radius: 50%;
+        box-shadow: -30px 15px 60px #0000002b ;
+        background: center / cover no-repeat url('../img/home/27734.jpg');
+    }
+
 }
