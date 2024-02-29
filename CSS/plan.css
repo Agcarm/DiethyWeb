@@ -6,6 +6,11 @@ header{
     background: center / cover no-repeat url(/img/plan/Mask\ Group\ 2.jpg);
     background-size: 160%;
     padding-bottom: 150px;
+    padding: 5px 0 0 140px;
+
+    nav .plan-nav li a, .logo{
+        color: #fff;
+    }
 
     div.content{
         display: block;
@@ -21,7 +26,7 @@ header{
         }
 
         .plan-title{
-            font-size: 68px;
+            font-size: 60px;
         }
     }
 }

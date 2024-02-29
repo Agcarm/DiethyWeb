@@ -315,14 +315,17 @@ section.company{
 
 }
 
-
+footer{
+    padding: 20px;
+}
 footer, footer *{
     background-color: #c5c5c5;
+    div.foot:first-of-type{
+        padding-bottom: 20px;
+    }
     div.foot{
         display: flex;
-        justify-content: center;
-        gap: 50px;
-
+        justify-content: space-between;
         p{
             width: 20%;
         }
