@@ -3,7 +3,10 @@
     padding: 0;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F5F5F5;
+}
+
+body{
+    background-color: #fff;
 }
 
 header.header{
@@ -57,10 +60,12 @@ svg#back{
     background: center / contain no-repeat url('/img/logo.svg');
 }
 
-
-nav {
+nav ul {
+    position: relative;
     float: right;
-    margin: 20px 5px;
+    margin: 20px -22px;
+    /* right: -78%; */
+    z-index: 3;
 }
 nav ul li{
     display: inline;
@@ -73,6 +78,11 @@ nav ul li a{
     padding: 12px 35px; 
     margin: 0 16px;
     color: #000000;
+}
+nav ul li a:hover{
+    background-color: #FF1400;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 nav ul li a.active{
@@ -94,6 +104,7 @@ nav ul li a.active{
 
 .green{
     color: #24D50D;
+    font-size: 5.2rem;
 }
 
 .head-body{
@@ -119,7 +130,10 @@ main{
     display: grid;
     row-gap: 100px;
 }
-
+.title-2{
+    font-size: 50px;
+    padding-bottom: 30px;
+}
 section.fruit{
     display: flex;
     align-items: center;
@@ -127,10 +141,6 @@ section.fruit{
     .fruitdesc{
         width: 28%;
         margin-right: 150px;
-    }
-    .title-2{
-        font-size: 50px;
-        margin-bottom: 30px;
     }
     .fruitdesc h2::before{
         display: inline-block;
@@ -163,7 +173,11 @@ section.fruit{
         padding: 5px 10px;
         text-align: center;
     }
-
+    a.fruitbtn:hover{
+        background-color: #24D50D;
+        color: #ffffff;
+        font-weight: bold;
+    }
     .vegdesc{
         width: 29%;
         margin-left: 150px;
@@ -177,4 +191,155 @@ section.fruit{
         background: center / cover no-repeat url('../img/home/27734.jpg');
     }
 
+}
+.comp-body *{
+    background-color: #F5F5F5;
+}
+section.company{
+    align-items: center;
+    padding-top: 50px;
+
+    .title-2{
+        text-align: center;
+        background-color: #F5F5F5;
+        padding-top: 20px;
+    }
+    .title-2::after{
+        display: block;
+        content: '';
+        width: 20%;
+        height: 8px;
+        margin: auto;
+        background-color: #24D50D;
+        margin-top: 12px;
+    }
+
+    .comp-p{
+        width: 29%;
+        margin-top: 50px;
+        text-align: justify;
+        font-size: 20px;
+    }
+
+    .aigirl{
+        position: relative;
+        top: -109px;
+        right: -38px;
+        background-color: transparent;
+    }
+    div.comp-body{
+        display: flex;
+        justify-content: center;
+        background-color: #F5F5F5;
+
+        a{
+            display: block;
+            width: 100px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #24D50D;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 50px;
+            padding: 8px 10px;
+            margin-top: 40px;
+        }
+    }
+    div.services{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-content: space-around;
+        justify-content: center;
+        margin: 0 40px;
+        .serv{
+            position: relative;
+            top: -50px;
+            display: block;
+            width: 20%;
+            box-shadow: 8px 5px 20px #0000002f;
+
+            
+            p{
+                padding: 0 40px;
+            }
+        }
+        div.down{
+            display: block;
+            background-color: #FF1400;
+            padding-bottom: 50px;
+            text-align: center;
+
+            a{
+                margin-top: 60px;
+                background-color: #FF1400; 
+                color: #fff;    
+            }
+        }
+        .serv *{
+            background-color: #F8BEB9;
+            padding: 20px 0;
+        }
+        .serv h3{
+            text-align: center;
+        }
+        .serv h3::before{
+            display: block;
+            content: '';
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            
+        }
+        .s1, .s2, .s3, .s4{
+            padding: 10px;
+            text-align: justify;
+        }
+        .s1 h3::before{
+            background: center / contain no-repeat url('/img/home/utensils_5074696.svg');
+        }
+        .s2 h3::before{
+            background: center / contain no-repeat url('/img/home/medal_12616993.svg');
+        }
+        .s3 h3::before{
+            background: center / contain no-repeat url('/img/home/flame_3916992.svg');
+        }
+
+        .s4 h3::before{
+            background: center / contain no-repeat url('/img/home/lightbulb-exclamation_10469314.svg');
+        }
+
+    }
+
+
+}
+
+
+footer, footer *{
+    background-color: #c5c5c5;
+    div.foot{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        p{
+            width: 20%;
+        }
+        h6::before{
+            display: inline-block;
+            content: '';
+            width: 25px;
+            height: 25px;
+            padding: 0 2px;
+            background: center / contain no-repeat url('/img/logo.svg');
+        }
+        ul li{
+            display: inline;
+            margin: 20px;
+        }
+        ul li a{
+            text-decoration: none;
+        }
+    }
 }

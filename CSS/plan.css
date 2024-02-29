@@ -1,0 +1,27 @@
+body{
+    background-color: #fff;
+}
+
+header{
+    background: center / cover no-repeat url(/img/plan/Mask\ Group\ 2.jpg);
+    background-size: 160%;
+    padding-bottom: 150px;
+
+    div.content{
+        display: block;
+        background-color: #ffffff2b;
+        align-items: center;
+        width: 50%;
+        position: relative;
+        bottom: -50px;
+        right: 20px;
+
+        *{
+            margin: auto;
+        }
+
+        .plan-title{
+            font-size: 68px;
+        }
+    }
+}
