@@ -3,30 +3,52 @@ body{
 }
 
 header{
-    background: center / cover no-repeat url(/img/plan/Mask\ Group\ 2.jpg);
-    background-size: 160%;
-    padding-bottom: 150px;
+    background: center / cover no-repeat url(/img/plan/Mask\ Group\ 6.jpg);
+    background-size: 110%;
     padding: 5px 0 0 140px;
+    height: 740px;
+    margin-bottom: 50px;
 
     nav .plan-nav li a, .logo{
         color: #fff;
     }
 
     div.content{
-        display: block;
-        background-color: #ffffff2b;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff2f;
+        box-shadow: 20px 20px 20px #0000005f;
+        border-radius: 50px;
         align-items: center;
-        width: 50%;
+        width: 45%;
         position: relative;
-        bottom: -50px;
+        bottom: -100px;
         right: 20px;
-
-        *{
-            margin: auto;
-        }
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(5px);
 
         .plan-title{
             font-size: 60px;
+            width: 70%;
+            margin-top: 40px;
         }
+        .head-body{
+            width: 70%;
+            margin: 20px 0 ;
+            font-size: 20px;
+        }
+        .startbtn{
+            align-self: flex-start;
+            margin: 0 0 50px 105px ; 
+            color: #FF1400;
+            background-color: transparent;
+            border: #FF1400 solid 2px;
+        }
+    }
+}
+main{
+    margin-top: 200px;
+    section.benefits{
+        display: flex;
     }
 }
