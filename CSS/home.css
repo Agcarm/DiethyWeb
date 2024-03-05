@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -312,7 +315,38 @@ section.company{
 
     }
 
+}
+h2.title-2.diet{
+    background-color: white;
+}
+section.company.diet{
+    margin-bottom: 50px;
+    div.plans{
+        display: flex;
+        justify-content: space-evenly;
 
+        div.plan{
+            padding: 20px;
+            margin-top: 50px;
+            border: transparent;
+            border-radius: 15px;
+            box-shadow: 2px 2px 20px #0000002f;
+
+            *{
+                margin: 10px;
+            }
+            h5{
+               font-size: 30px; 
+               color: #707070;
+            }
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            ul li{
+                list-style: none;
+            }
+        }
+    }
 }
 
 footer{
