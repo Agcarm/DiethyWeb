@@ -1,16 +1,24 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif, Tahoma, Geneva, Verdana;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: #fff;
+    overflow-x: hidden;
+    margin-top: 10px;
+}
+
+header, .fruit{
+    margin: 0 70px;
+
 }
 
 header.header{
-    margin: 5px 0px 0px 140px;
     padding-bottom: 20%;
 }
 .circle{
@@ -37,18 +45,27 @@ header.header{
     bottom: 20px;
     left: 150px;
 }
-svg#back{
+.ellipses{
     position: absolute;
-    width: 40%;
+    top: 32%;
+    right: -32%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: center / contain no-repeat url('/img/home/ellipses.svg');
+}
+.heroImg{
+    position: absolute;
+    top: 12%;
+    width: 55%;
     height: auto;
-    background-color: transparent;
-    top: 11%;
-    right: 134px;
+    right: -90px;
 }
 
 .logo{
     margin: 18px 0 0 0;
     font-size: 18px;
+    font-weight: 800;
     float: left;
 }
 .logo::before{
@@ -64,19 +81,17 @@ nav ul {
     position: relative;
     float: right;
     margin: 20px -22px;
-    /* right: -78%; */
     z-index: 3;
 }
 nav ul li{
     display: inline;
-    font-weight: bold;
-    text-decoration: none;   
+    font-weight: 600;
 }
 nav ul li a{
     text-decoration: none;
     font-size: 14px;
     padding: 12px 35px; 
-    margin: 0 16px;
+    margin: 0 8px;
     color: #000000;
 }
 nav ul li a:hover{
@@ -96,7 +111,9 @@ nav ul li a.active{
 }
 
 .big-title{
-    font-size: 5.2rem;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
     width: 56%;
     margin-top: 100px;
     margin-bottom: 20px;
@@ -104,15 +121,15 @@ nav ul li a.active{
 
 .green{
     color: #24D50D;
-    font-size: 5.2rem;
+    font-size: 5rem;
 }
 
 .head-body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    width: 43%;
-    margin: 50px 0;
-    word-spacing: 2px;
+    width: 48%;
+    margin: 50px 0 70px 0;
+    line-height: 1.5;
 }
 
 .startbtn{
@@ -121,9 +138,9 @@ nav ul li a.active{
     background-color: #FF1400;
     color: white;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin: 5px 0;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 50px;
 }
 
 main{
@@ -131,16 +148,17 @@ main{
     row-gap: 100px;
 }
 .title-2{
-    font-size: 50px;
-    padding-bottom: 30px;
+    font-size: 47px;
+    font-weight: 800;
+    position: relative;
 }
 section.fruit{
     display: flex;
     align-items: center;
     justify-content: center;
     .fruitdesc{
-        width: 28%;
-        margin-right: 150px;
+        width: 32%;
+        margin-right: 130px;
     }
     .fruitdesc h2::before{
         display: inline-block;
@@ -154,15 +172,19 @@ section.fruit{
     }
     div.fruitimg{
         display: inline;
-        height: 600px;
-        width: 600px;
+        height: 500px;
+        width: 500px;
         border-radius: 50%;
         box-shadow: 30px 15px 60px #0000002b ;
         background: center / cover no-repeat url('../img/home/50861.jpg');
     }
     .sec-p{
-        margin: 50px 0;
+        margin: 60px 0 40px 0;
         text-align: justify;
+    }
+    .sec-p:nth-of-type(2){
+        margin: 0;
+        margin-bottom: 40px;
     }
     a.fruitbtn{
         text-decoration: none;
@@ -179,13 +201,24 @@ section.fruit{
         font-weight: bold;
     }
     .vegdesc{
-        width: 29%;
-        margin-left: 150px;
+        width: 36%;
+        margin-left: 130px;
+    }
+    .vegdesc h2::after{
+        display: inline-block;
+        position: absolute;
+        content: '';
+        height: 70px;
+        width: 8px;
+        background-color: #FF1400;
+        top: 5px;
+        right: 0;
+        margin: 0 10px 0 0;
     }
     div.vegimg{
         display: inline;
-        height: 600px;
-        width: 600px;
+        height: 500px;
+        width: 500px;
         border-radius: 50%;
         box-shadow: -30px 15px 60px #0000002b ;
         background: center / cover no-repeat url('../img/home/27734.jpg');
@@ -218,12 +251,12 @@ section.company{
         width: 29%;
         margin-top: 50px;
         text-align: justify;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .aigirl{
         position: relative;
-        top: -109px;
+        top: -60px;
         right: -38px;
         background-color: transparent;
     }
@@ -248,26 +281,25 @@ section.company{
     div.services{
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
-        align-content: space-around;
-        justify-content: center;
-        margin: 0 40px;
+        gap: 40px;            
+        position: relative;
+        top: -50px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 70px;
+        
         .serv{
-            position: relative;
-            top: -50px;
             display: block;
-            width: 20%;
+            width: 300px;
             box-shadow: 8px 5px 20px #0000002f;
 
-            
             p{
-                padding: 0 40px;
+                padding: 0 45px;
             }
         }
         div.down{
             display: block;
             background-color: #FF1400;
-            padding-bottom: 50px;
             text-align: center;
 
             a{
@@ -289,12 +321,12 @@ section.company{
             width: 50px;
             height: 50px;
             margin: 0 auto;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
             
         }
         .s1, .s2, .s3, .s4{
             padding: 10px;
-            text-align: justify;
+            text-align: center;
         }
         .s1 h3::before{
             background: center / contain no-repeat url('/img/home/utensils_5074696.svg');
@@ -315,31 +347,120 @@ section.company{
 
 }
 
+.plans{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    .container-plans{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin: 100px 0 180px 0;
+    }
+    .title-2{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .title-2::after{
+        display: block;
+        content: '';
+        width: 20%;
+        height: 8px;
+        margin: auto;
+        background-color: #24D50D;
+        margin-top: 12px;
+    }
+    .plan{
+        background-color: #fff;
+        box-shadow: 0px 2px 15px #0000002b;
+        border-radius: 20px;
+        padding: 5px 20px;
+
+        ul li:last-of-type{
+            margin-bottom: 30px;
+        }
+    }
+
+    h5{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color: #707070;
+        margin-top: 20px;
+    }
+
+    .plan h3{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    ul li{
+        display: block;
+        text-align: left;
+        margin: 15px 20px;
+        color: #707070;
+    }
+    ul li::after{
+        float: right;
+        position: relative;
+        top: 2px;
+        content: '';
+        width: 20px;
+        margin-left: 30px;
+        padding-bottom: 20px;
+        background: center / contain no-repeat url('/img/home/cross.svg');
+    }
+    ul li.check::after{
+        background: center / contain no-repeat url('/img/home/check.svg');
+    }
+
+    .premium h5{
+        color: #7700FF;
+    }
+
+    a.order{
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #FF1400;
+        text-decoration: none;
+        border: 1px solid #FF1400;
+        border-radius: 50px;
+        padding: 10px 30px;
+    }
+
+    .premium .order{
+        color: white;
+        background-color: #FF1400;
+    }
+}
 
 footer, footer *{
     background-color: #c5c5c5;
-    div.foot{
-        display: flex;
-        justify-content: center;
-        gap: 50px;
+}
+footer{
+    height: 200px;
+}
+div.foot{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 
-        p{
-            width: 20%;
-        }
-        h6::before{
-            display: inline-block;
-            content: '';
-            width: 25px;
-            height: 25px;
-            padding: 0 2px;
-            background: center / contain no-repeat url('/img/logo.svg');
-        }
-        ul li{
-            display: inline;
-            margin: 20px;
-        }
-        ul li a{
-            text-decoration: none;
-        }
+    p{
+        width: 20%;
+    }
+    h6::before{
+        display: inline-block;
+        content: '';
+        width: 25px;
+        height: 25px;
+        padding: 0 2px;
+        background: center / contain no-repeat url('/img/logo.svg');
+    }
+    ul li{
+        display: inline;
+        margin: 20px;
+    }
+    ul li a{
+        text-decoration: none;
     }
 }
